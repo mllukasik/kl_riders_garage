@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>RIDERS GARAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/f8b616e1b5.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="page">
+      <div stlye="position: relative" x-data="{open: false}">
+        <div class="menu-icon gap-5 font-bold" x-show="open">
+          <div>Riders Garage</div>
+          <div>Kontakt</div>
+          <div>O firmie</div>
+          <div class="grow"></div>
+        </div>
+        <div class="switch" @click="open = !open" :style="open ? 'color: white' : ''">
+          <i x-show="!open" class="fa-solid fa-bars"></i>
+          <i x-show="open" class="fa-solid fa-circle-xmark"></i>
+        </div>
+      </div>
+      <div class="text-center flex flex-col fill px-2 py-6">
+        <img src="images/RIDERS.svg" class="my-5 main-logo">
+        <div class="font-bold text-4xl  flex flex-col justify-center text-shadow">
+          <span>Odkryj serwis </br> z pasją</span>
+        </div>
+        <div class="mt-2">
+          <span class="text-xs">ul. Sosnowa 32 Chorowice</span>
+        </div>
+        <div class="grow"></div>
+        <div>
+          <button class="btn icon-arrow btn-primary">
+            <div>Skontaktuj się z nami</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="page">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6750.124460387525!2d19.856885643975765!3d49.94920368476271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471667b881d124eb%3A0x1c14a628a3871d0c!2sRiders%20Garage!5e0!3m2!1sen!2spl!4v1709356726021!5m2!1sen!2spl"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="main-map">
+      </iframe>
+      <div style="width: 100%; height: 75%;" class="grow">
+        <div class="fill" style="position: relative; box-sizing: border-box;">
+          <img src="images/RIDERS.svg"
+            style="max-height: 95%; max-width: 95%; position: absolute; margin: auto; left: 0; right: 0; top: 0; bottom: 0; opacity: 0.05; z-index: -1;">
+          <div class="p-3 flex gap-2 flex-col justify-center fill">
+            <div>
+              <a href="tel:+48536225185" class="contact">
+                <div class="icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="title">Telefon</div>
+                <div class="value text-shadow">+48 536 225 185</div>
+              </a>
+            </div>
+            <a href="mailto:kontakt@ridersgarage.pl" class="contact">
+              <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="title">eMail</div>
+              <div class="value">kontakt@ridersgarage.pl</div>
+            </a>
+            <a href="https://wa.me/+48536225185" class="contact">
+              <div class="icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="title">WhatsApp</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="page unbounded text-center">
+      <div class="text-2xl font-bold">
+        Riders Garage
+      </div>
+      <div class="p-2">
+        To profesjonalny warsztat specjalizujący się w naprawie i serwisie quadów oraz motocykli.
+        Dzięki zaawansowanej wiedzy technicznej i pasji do motoryzacji zapewniamy najwyższej jakości usługi dla
+        wszystkich entuzjastów jednośladów i pojazdów terenowych.
+      </div>
+      <div class="p-2">
+        Nasz warsztat jest nowocześnie wyposażony, dzięki dofinasowaniu ze środków państwowych oraz funduszu Unii
+        Europejskiej.
+        Posiadamy wysokiej klasy komputer diagnostyczny oraz inne narzędzia, które wspomagają nas w podnoszeniu jakości
+        wykonywanych przez nas usług.
+      </div>
+      <div class="p-2">
+        Oferujemy szeroki zakres prac, które obejmują:
+      </div>
+      <div class="p-2 font-bold">
+        <span>Naprawa Uszkodzeń</span>
+      </div>
+      <div class="p-2">
+        <span>Kompleksowa naprawa wszelkich uszkodzeń mechanicznych i estetycznych</span>
+      </div>
+      <div class="p-2 font-bold">
+        <span>Przeglądy Techniczne</span>
+      </div>
+      <div class="p-2">
+        Regularne przeglądy techniczne zapewniające sprawność i niezawodność Twojego pojazdu
+      </div>
+      <div class="p-2">
+        Zapraszamy do <span class="font-bold">Riders Garage</span> - miejsca, gdzie pasja do motoryzacji łączy się z
+        profesjonalizmem.
+      </div>
+    </div>
+  </div>
+  <div class="footer text-center text-2xs p-1">
+    <div>© RIDERS GARAGE</div>
+    <div><a href="tel:+48536225185" class="contact">Telefon kontaktowy: +48 536 225 185</a></div>
+    <div><a href="mailto:kontakt@ridersgarage.pl" class="contact">Email: kontakt@ridersgarage.pl</a></div>
+  </div>
+</body>
+</html>
