@@ -585,16 +585,16 @@ video {
   gap: 1.25rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .px-2 {
@@ -699,21 +699,6 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.menu-icon {
-  position: fixed;
-  width: 100%;
-  padding: .25rem .5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  display: flex;
-}
-
-.menu-icon>div {
-  cursor: pointer;
-}
-
 .page {
   width: 100vw;
   max-height: 100vh;
@@ -776,8 +761,31 @@ body {
   color: white;
 }
 
+.menu-icon {
+  position: fixed;
+  width: 100%;
+  padding: .25rem .5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  display: flex;
+  z-index: 10;
+}
+
+.menu-icon>div {
+  cursor: pointer;
+}
+
 .switch {
   display: none;
+  z-index: 20;
+}
+
+@media only screen and (min-width: 751px) {
+  .display-flex-on-large {
+    display: flex !important;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -786,7 +794,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    z-index: 10;
     height: 100vh;
     padding-top: 1rem;
     padding-bottom: 20%;
@@ -794,10 +801,9 @@ body {
 
   .switch {
     display: unset;
-    position: absolute;
+    position: fixed;
     top: 0.25rem;
     right: 0.25rem;
     cursor: pointer;
-    z-index: 20;
   }
 }

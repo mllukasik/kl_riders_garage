@@ -13,12 +13,12 @@
 
 <body>
   <div class="page-wrapper">
-    <div class="page">
-      <div stlye="position: relative" x-data="{open: false}">
-        <div class="menu-icon gap-5 font-bold" x-show="open">
-          <div>Riders Garage</div>
-          <div>Kontakt</div>
-          <div>O firmie</div>
+    <div class="page" id="title">
+      <div x-data="{open: false}">
+        <div class="menu-icon gap-5 font-bold display-flex-on-large" x-show="open">
+          <div @click="moveTo('#title'); open=false">Riders Garage</div>
+          <div @click="moveTo('#contact'); open=false">Kontakt</div>
+          <div @click="moveTo('#about'); open=false">O firmie</div>
           <div class="grow"></div>
         </div>
         <div class="switch" @click="open = !open" :style="open ? 'color: white' : ''">
@@ -44,7 +44,7 @@
     </div>
   </div>
   <div class="page-wrapper">
-    <div class="page">
+    <div class="page" id="contact">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6750.124460387525!2d19.856885643975765!3d49.94920368476271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471667b881d124eb%3A0x1c14a628a3871d0c!2sRiders%20Garage!5e0!3m2!1sen!2spl!4v1709356726021!5m2!1sen!2spl"
         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -83,7 +83,7 @@
     </div>
   </div>
   <div class="page-wrapper">
-    <div class="page unbounded text-center">
+    <div class="page unbounded text-center" id="about">
       <div class="text-2xl font-bold">
         Riders Garage
       </div>

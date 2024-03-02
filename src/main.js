@@ -8,3 +8,7 @@ window.addEventListener("load", (event) => {
         elem.style = "height: " + window.innerHeight + "px;";
     }
 });
+
+function moveTo(name) {
+    window.location = name;
+}
