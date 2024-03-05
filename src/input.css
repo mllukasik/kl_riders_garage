@@ -10,78 +10,102 @@
 html {
     font-size: 20px;
     font-family: app-font-family;
-    font-weight: 200;
+    font-weight: 400;
     scroll-behavior: smooth;
 }
 
 body {
-    background: rgb(248, 250, 252);
-    background: radial-gradient(circle, rgba(248, 250, 252, 1) 0%, rgba(226, 232, 240, 1) 75%, rgba(203, 213, 225, 1) 100%);
-    @apply bg-white dark:bg-black;
-    @apply dark:text-white;
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 0px black;
     padding: 0;
     margin: 0;
 }
 
-.fill {
-    width: 100%;
-    height: 100%;
-}
-
-.text-shadow {
-    text-shadow: 3px 3px 5px rgba(66, 68, 90, 0.45);
-}
-
 .text-2xs {
-    font-size: 0.50rem;
+    font-size: 0.5rem;
     line-height: 0.75rem;
 }
 
-.btn {
-    position: relative;
-    padding: 0.5rem 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 5px 3px 8px;
-    @apply font-bold rounded text-left w-full;
-}
-
-.btn.icon-arrow>*::after {
-    position: absolute;
-    right: 1rem;
-    content: '⮕';
-}
-
-.btn-primary {
-    @apply bg-zinc-800 text-white;
-}
-
-.page {
-    width: 100vw;
-    max-height: 100vh;
-    position: relative;
-}
-
-.unbounded {
-    height: unset !important;
-    max-height: unset !important;
-}
-
-.page-wrapper {
-    min-height: 100vh;
-}
-
-.main-logo {
-    max-width: 100%;
-    max-height: 30%;
-    filter: drop-shadow(7.5px 10px 5px rgba(66, 68, 90, 0.45));
-}
-
-.small-logo {
-    max-width: 5rem;
-}
-
-.main-map {
+.menu {
+    position: fixed;
     width: 100%;
-    height: 25%;
+    z-index: 10;
+}
+
+.menu > .icon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+.menu > .items {
+    background-color: black;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.menu > .items > div {
+    cursor: pointer;
+}
+
+.main_logo {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main_logo>img {
+    max-height: 50%;
+    max-width: 75%;
+    margin-top: 10vh;
+    margin-bottom: 1rem;
+}
+
+.main_logo .backgroud {
+    background-image: url("images/main_background.jpg");
+    width: 100%;
+    height: calc(100% + 100px);
+    background-size: 100vw;
+    background-position-x: 75%;
+    position: fixed;
+    z-index: -2;
+    transition: opacity 0.5s linear;
+}
+
+.seperator {
+    @apply text-center font-bold text-lg text-primary my-4;
+    position: relative;
+}
+
+.seperator > .line {
+    position: absolute;
+    border-bottom: 1px solid #8D8D8D;
+    width: 98%;
+    top: 50%;
+    z-index: -1;
+    left: 1%;
+}
+
+.services>.service {
+    background-color: rgba(255, 255, 255, 0.1);
+    @apply p-10 mt-5 font-bold text-lg text-center;
+}
+
+.main_map {
+    width: 100%;
+}
+
+.contacts {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
 }
 
 .contact {
@@ -93,70 +117,37 @@ body {
 .contact>.icon {
     width: 5rem;
     height: 5rem;
-    background-color: red;
     font-size: 2rem;
     text-align: center;
     line-height: 5rem;
     border-radius: 50%;
-    @apply bg-zinc-800;
     color: #f2f2f2ff;
+    @apply bg-primary;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
 .contact>.title {
     @apply font-bold;
 }
 
-
 .contact>.value {
     font-weight: 500;
 }
 
-.footer {
-    background-color: black;
-    color: white;
-}
-
-.menu-icon {
-    position: fixed;
-    width: 100%;
-    padding: .25rem .5rem;
-    @apply bg-zinc-800 text-white;
-    display: flex;
-    z-index: 10;
-}
-
-.menu-icon>div {
-    cursor: pointer;
-}
-
-.switch {
-    display: none;
-    z-index: 20;
-}
-
-@media only screen and (min-width: 751px) {
-    .display-flex-on-large {
-        display: flex !important;
-    }
-}
-
 @media only screen and (max-width: 750px) {
 
-    .menu-icon {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        height: 100vh;
-        padding-top: 1rem;
-        padding-bottom: 20%;
+    .main_logo .backgroud {
+        background-size: auto 100vh;
     }
 
-    .switch {
-        display: unset;
-        position: fixed;
-        top: 0.25rem;
-        right: 0.25rem;
-        cursor: pointer;
+    .contacts {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu > .items {
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
     }
 }
