@@ -587,16 +587,9 @@ video {
   color: rgb(25 151 107 / var(--tw-text-opacity));
 }
 
-@font-face {
-  font-family: "app-font-family";
-
-  src: url("fonts/GeistVariableVF.ttf");
-}
-
 html {
-  font-size: 20px;
-  font-family: app-font-family;
-  font-weight: 400;
+  font-family: 'Athiti';
+  font-size: 22px;
   scroll-behavior: smooth;
 }
 
@@ -730,7 +723,7 @@ body {
 }
 
 .contact>.value {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 750px) {

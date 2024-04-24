@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>RIDERS GARAGE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
   <link href="output.css" rel="stylesheet">
   <script src="main.js"></script>
   <script src="https://kit.fontawesome.com/f8b616e1b5.js" crossorigin="anonymous"></script>
@@ -13,9 +14,9 @@
 
 <body x-data="{ openMenu: false }">
   <div class="menu">
-    <div class="items" x-show="openMenu">
+    <div class="items font-bold" x-show="openMenu">
       <div @click="moveTo('#start'); openMenu = false">RIDERS GARAGE</div>
-      <div @click="moveTo('#services'); openMenu = false">Serwisy</div>
+      <div @click="moveTo('#services'); openMenu = false">Usługi</div>
       <div @click="moveTo('#contact'); openMenu = false">Kontakt</div>
       <div @click="moveTo('#about'); openMenu = false">O firmie</div>
     </div>
@@ -29,13 +30,13 @@
     <div class="text-sm">
       <div>Podkrakowski serwis motocykli i quadów.</div>
       <div>Znajdziesz nas w</div>
-      <a href="https://maps.app.goo.gl/f3oFQMVB5T7pvzj1A" class="text-primary">Chorowicach ul. Sosnowa 32.</a>
+      <a href="https://maps.app.goo.gl/f3oFQMVB5T7pvzj1A" class="text-primary font-bold">Chorowicach ul. Sosnowa 32.</a>
       <div>W razie pytań dzwoń</div>
-      <a href="phone:+48536225185" class="text-primary">+48 536 225 185</a>
+      <a href="tel:+48536225185" class="text-primary font-bold">+48 536 225 185</a>
     </div>
   </div>
   <div id="services" class="seperator">
-    <span>SERWISY</span>
+    <span>USŁUGI</span>
     <div class="line"></div>
   </div>
   <div class="services">
